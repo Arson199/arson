@@ -1,0 +1,136 @@
+/*globals*/
+.font-os{
+	font-family: 'Open Sans', sans-serif; 
+}
+.font-rb{
+	font-family: 'Roboto Slab', serif;
+}
+.font-size-13{
+	font-size: 13px;	
+}
+.font-size-16{
+	font-size: 16px;
+}
+.bg-orange{
+	background: #e35e00;
+}
+.text-orange{
+	color: #e35300;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+}
+/*top navbar section*/
+#top-navbar{
+	border-bottom: 2px solid #e35300;
+}
+#top-navbar input{
+	border-radius: 20px 0 0 20px !important;
+}
+#top-navbar .input-group-text{
+	border-radius: 0 20px 20px 0 !important;
+}
+#top-navbar .fa-times,#top-navbar .fa-bars{
+	cursor: pointer;
+	display: none;
+}
+/*sidebar-slider section*/
+#sidebar-slider .menu .nav-link:hover{
+	color: #ff9c2a;
+}
+/*feature-product section*/
+#feature-products h5,#on-sales h5,#new-arrival h5,#similar-prd h5{
+	background: orange;
+	color: white;
+	width: 200px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+}
+#feature-products h5::after{
+	content: "";
+	border-top: 50px solid orange;
+	border-right: 50px solid transparent;
+	position: absolute;
+	margin-left: 36px;
+}
+/*#onsales products section*/
+#on-sales h5::after{
+	content: "";
+	border-top: 50px solid orange;
+	border-right: 50px solid transparent;
+	position: absolute;
+	margin-left: 32px;
+}
+
+.overlay{
+	display: block;
+	position: absolute;
+	top: 5%;
+	width: 70px;
+	margin-left: 0;
+	opacity: 0;
+}
+
+.overlay .fa,.overlay .far{
+	cursor: pointer;
+	background: #fff;
+	color: #000;
+	height: 35px;
+	width: 35px;
+	line-height: 35px;
+	font-size: 20px;
+	margin-bottom: 5%;
+}
+/*#new-arrival products section*/
+#new-arrival h5::after{
+	content: "";
+	border-top: 50px solid orange;
+	border-right: 50px solid transparent;
+	position: absolute;
+	margin-left: 21px;
+}
+/*similar products section*/
+#similar-prd h5::after{
+	content: "";
+	border-top: 50px solid orange;
+	border-right: 50px solid transparent;
+	position: absolute;
+	margin-left: 39px;
+}
+
+.prd-top:hover .overlay{
+	opacity: 1;
+	margin-left: 10px;
+	transition: .5s;
+}
+
+.overlay .fa:hover,.overlay .far:hover{
+	color: #e35300;
+}
+
+.overlay .btn-secondary{
+	background: none;
+	border: none;
+	box-shadow: none;
+}
+
+#feature-products .col-md-4{
+	overflow: hidden;
+}
+
+#feature-products img:hover{
+	transform: scale(1.2);
+	transition: transform 1.5s ease;
+}
+
+@media screen and (max-width: 768px){
+	#top-navbar .fa-bars{
+		display: block;
+	}
+	#sidebar-slider .col-md-2{
+		display: none;
+	}
+}
